@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TudowRestaurant.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TudowRestaurant"
+    xmlns:pages="clr-namespace:TudowRestaurant.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Tudow Restaurant"
+    Shell.FlyoutBackground="White"
+    Shell.FlyoutWidth="70"
+    Shell.ForegroundColor ="White"
+    Shell.BackgroundColor="{StaticResource PreRed}"
+    
+      
+    >
+ 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:MainPage}"
+        Icon="home.png"
+        Route="MainPage" />
+
+    <ShellContent
+       Title="Orders"
+       ContentTemplate="{DataTemplate pages:OrdersPage}"
+       Icon="list.png"
+       Route="OrderPage" />
+
+    <ShellContent
+       Title="Mnanage Menu"
+       ContentTemplate="{DataTemplate pages:ManageMenuItemPage}"
+       Icon="grid.png"
+       Route="ManageMenuItemPage" />
+
+    <Shell.FlyoutFooter>
+        <Image Source="phone.png"
+               HeightRequest="20"
+               WidthRequest="20"
+               Margin="0, 0, 0, 25"/>
+    </Shell.FlyoutFooter>
+</Shell>
